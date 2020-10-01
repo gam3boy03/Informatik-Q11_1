@@ -79,6 +79,16 @@ class Node<T extends Object>{
     }
   }
   
+  void removeAt(int index){
+    if(index == 0 && next != null) next = next.next;
+    else next.removeAt(index - 1);
+  }
+  
+  void removeLast(){
+    if(next.next == null) next = null;
+    else next.removeLast();
+  }
+  
   Node(T value){
     this.value = value;
   }

@@ -52,6 +52,20 @@ class List<T extends Object>{
     }
   }
   
+  void removeFirst(){
+    if(firstNode != null)firstNode = firstNode.next;
+  }
+  
+  void removeAt(int index){
+    if(firstNode != null)firstNode.removeAt(index);
+  }
+  
+  void removeLast(){
+    if(firstNode == null) return;
+    if(firstNode.next == null) firstNode = null;
+    else firstNode.removeLast();
+  }
+  
   List(){
     
   }
