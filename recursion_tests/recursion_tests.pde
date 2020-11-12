@@ -9,7 +9,7 @@ int rec_fact(int n){
 
 int iter_fact(int n){
   int out = 1;
-  for(int i = 2; i < n; i++){
+  for(int i = n; i > 0; i--){
     out *= i;
   }
   return out;
